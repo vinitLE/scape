@@ -141,11 +141,70 @@ main{
     padding: 10px;   
 }
 .page2{
-    height: 100vh;
+    height: 200vh;
    position: relative;
    top:100vh;
-   background-color: black;
+   overflow: hidden;
+   /* background-color: blanchedalmond; */
    z-index: 0;
+   display: flex;
+   
+    
+}
+.page3{
+    height: 100vh;
+    width: 100%;
+    /* position: relative;
+    top: 200vh; */
+    z-index: 3;
+    background-color: black;
+    
+}
+.page4{
+    height: 100vh;
+    background-color: black;
+}
+
+.trigger1{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    /* overflow: hidden; */
+    /* justify-content: space-around; */
+    align-items: center;
+    /* background-color: rgb(245, 96, 96); */
+}
+.block1{
+    background-color: aqua;
+    position: absolute;
+    left: 30%;
+    z-index: 3;
+}
+.block2{
+    background-color: aqua;
+    position: absolute;
+    left: 66.9%;
+    z-index: 3;
+}
+.image1{
+    background-color: aqua;
+    height: 90%;
+    width: 30%;
+    position: absolute;
+    left: 36%;
+    z-index: 1;
+    /* margin-left: 50px; */
+}
+.image2{
+    background-color: rgb(136, 115, 255);
+    position: absolute;
+    height: 80%;
+    width: 25%;
+    left: 38.5%;
+    z-index: 1;
+    /* margin-left: -900px; */
+}
+.innerbox{
     
 }
 .chatbot{
