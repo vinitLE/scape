@@ -51,9 +51,11 @@ const scene = new ScrollMagic.Scene({
 var tlfirstscroll = new TimelineLite();
 
 tlfirstscroll
-.set('.trigger1',{scale: 2.5,transformOrigin:"center top"})
-.to('.trigger1',3,{scale:1.5,y:"-9%"})
+.set('.trigger1',{scale: 4,transformOrigin:"center top"})
+.to('.trigger1',5,{scale:2,y:"-9%"})
 .to('.trigger1',3,{scale:1,y:"0%"})
+// .from('.image2',3,{autoAlpha:0},"-=9")
+
 
 var controller2=new ScrollMagic.Controller();
 
@@ -64,7 +66,7 @@ var scene1=new ScrollMagic.Scene({
     triggerHook:0
 })
 .setTween(tlfirstscroll)
-.addIndicators()
+// .addIndicators()
 .addTo(controller2);
 
 var tlsecoundscroll = new TimelineLite();
@@ -72,6 +74,7 @@ var tlsecoundscroll = new TimelineLite();
 tlsecoundscroll
 .to('.image1',3,{x:"-50%"})
 .to('.image2',3,{x:"50%"},"-=3")
+.from('.image2',3,{autoAlpha:0},"-=3")
 .from('.block1',1,{autoAlpha:0},"-=3")
 .from('.block2',1,{autoAlpha:0},"-=3")
 .to('.block1',3,{x:"-300px"},"-=3")
@@ -85,5 +88,5 @@ var scene2=new ScrollMagic.Scene({
 })
 .setTween(tlsecoundscroll)
 .setPin(".trigger1")
-.addIndicators()
+// .addIndicators()
 .addTo(controller2);
