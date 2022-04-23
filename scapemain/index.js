@@ -90,3 +90,54 @@ var scene2=new ScrollMagic.Scene({
 .setPin(".trigger1")
 // .addIndicators()
 .addTo(controller2);
+
+
+// page 4 java script
+const slide=document.querySelector('.slideimg');
+const slideimg=document.querySelectorAll('.slideimg img');
+
+      // button on page 4
+const prevbut=document.querySelector('#prevbut');
+const nextbut=document.querySelector('#nextbut');
+ 
+     //counter
+let counter=1;
+const size=slideimg[0].clientWidth;
+
+slide.style.transform = 'translateX(' + (-size * counter) + 'px)'; 
+
+    //button listeners
+nextbut.addEventListener('click', ()=>{
+    if(counter >=slideimg.length -1) return;
+    slide.style.transition="transform 0.4s ease-in-out";
+    counter++;
+    slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+});
+
+prevbut.addEventListener('click', () =>{
+    if (counter <= 0 ) return;
+    slide.style.transition="transform 0.4s ease-in-out";
+    counter--;
+    slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+});
+
+slide.addEventListener('transitionend', () => {
+    // console.log(slideimg[counter]);
+    if(slideimg[counter].id === 'lastclone'){
+        slide.style.transition = "none";
+        counter=slideimg.length - 2;
+        slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    }
+    if(slideimg[counter].id === 'firstclone'){
+        slide.style.transition = "none";
+        counter=slideimg.length - counter;
+        slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    }
+});
+
+
+
+
+
+
+    
