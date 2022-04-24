@@ -122,7 +122,7 @@ prevbut.addEventListener('click', () =>{
 });
 
 slide.addEventListener('transitionend', () => {
-    // console.log(slideimg[counter]);
+    console.log(slideimg[counter]);
     if(slideimg[counter].id === 'lastclone'){
         slide.style.transition = "none";
         counter=slideimg.length - 2;
