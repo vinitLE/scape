@@ -27,6 +27,30 @@
 // .setPin('.signup')
 // .addTo(controller);
 
+// scroll revale for 5 sec
+ScrollReveal({
+     reset: true,
+     distance:'100px',
+     duration: 2500,
+     delay: 400
+
+});
+
+
+// scroll reveal for sec 2
+ScrollReveal().reveal('.why1',{delay:100,origin: 'bottom'});
+ScrollReveal().reveal('.why2',{delay:150,origin: 'bottom'});
+ScrollReveal().reveal('.why3',{delay:200,origin: 'bottom'});
+ScrollReveal().reveal('.demo122',{delay:250,origin: 'left'});
+
+
+ScrollReveal().reveal('.pro1',{delay:100,origin: 'bottom'});
+ScrollReveal().reveal('.pro2',{delay:150,origin: 'bottom'});
+ScrollReveal().reveal('.pro3',{delay:200,origin: 'bottom'});
+ScrollReveal().reveal('.pro4',{delay:250,origin: 'bottom'});
+ScrollReveal().reveal('.pro5',{delay:300,origin: 'bottom'});
+
+
 function trans(){
     document.getElementById('hello').style.visibility='visible';
 }
@@ -92,48 +116,7 @@ var scene2=new ScrollMagic.Scene({
 .addTo(controller2);
 
 
-// page 4 java script
-const slide=document.querySelector('.slideimg');
-const slideimg=document.querySelectorAll('.slideimg img');
 
-      // button on page 4
-const prevbut=document.querySelector('#prevbut');
-const nextbut=document.querySelector('#nextbut');
- 
-     //counter
-let counter=1;
-const size=slideimg[0].clientWidth;
-
-slide.style.transform = 'translateX(' + (-size * counter) + 'px)'; 
-
-    //button listeners
-nextbut.addEventListener('click', ()=>{
-    if(counter >=slideimg.length -1) return;
-    slide.style.transition="transform 0.4s ease-in-out";
-    counter++;
-    slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-});
-
-prevbut.addEventListener('click', () =>{
-    if (counter <= 0 ) return;
-    slide.style.transition="transform 0.4s ease-in-out";
-    counter--;
-    slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-});
-
-slide.addEventListener('transitionend', () => {
-    console.log(slideimg[counter]);
-    if(slideimg[counter].id === 'lastclone'){
-        slide.style.transition = "none";
-        counter=slideimg.length - 2;
-        slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-    }
-    if(slideimg[counter].id === 'firstclone'){
-        slide.style.transition = "none";
-        counter=slideimg.length - counter;
-        slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-    }
-});
 
 
 
