@@ -72,7 +72,7 @@ main{
 
 }
 .wave1{
-    background-image: url(../images/wave.png);
+    background-image: url(./images/wave.png);
     
     animation: animate 20s linear infinite;
     animation-delay: 4s;
@@ -87,7 +87,7 @@ main{
 }
 .wave2{
     /* background-color: aqua; */
-    background-image: url(../images/wave.png);
+    background-image: url(./images/wave.png);
     animation: animate2 15s linear infinite;
     animation-delay: 1s;
     width: 80%;
