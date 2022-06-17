@@ -2,6 +2,7 @@ var express = require("express")
 var bodyParser = require("body-parser")
 var mongoose = require("mongoose")
 
+
 const app = express()
 
 app.use(bodyParser.json())
@@ -79,32 +80,49 @@ app.post("/done2",(req,res)=>{
     }
 })
 
-// app.post("/done3",(req,res)=>{
-//     var name = req.body.name;
-//     var email = req.body.email;
-//     var subject = req.body.subject;
-//     var mess = req.body.mess;
-  
+// router.use(express.static('public'))
 
+// var Storage=multer.diskStorage({
+//     destination:"./public/datafiles/",
+//     filename:(res,file,cb)=>{
+//         cb(null,file.filename+"_"+Date.now()+path.extname(file.originalname));
+//     }
+// });
+
+// var upload=multer({
+//     storage:Storage
+// }).single('file');
+
+// router.post('/upload', upload,function(req,res,next){
+//     var datafile=req.file.filename;
+//     var success = req.file.filename + "upload successfully";
+
+//     var filedetail = new filemodel({
+//          filesname:datafile
+//     });
+// filedetail.save(function(err,doc){
+// if(err) throw err;
+
+// res.render('submitdata',{title: 'Upload File', success:success });
+// });
+
+// });
+
+app.post("/upload",async(req,res)=>{
+    try{
+       let alert=require('alert');
+       alert("File uploaded succesfully");  
+    
+       return res.redirect('24hour.html');
+    }catch{
+        res.status(400).send(error);
+    }
+       
+        
+    })
     
 
-//     var data = {
-//         "name": name,
-//         "email" : email,
-//         "subject": subject,
-//         "mess" : mess
-//     }
 
-//     db.collection('contact').insertOne(data,(err,collection)=>{
-//         if(err){
-//             throw err;
-//         }
-//         console.log("Record Inserted Successfully");
-//     });
-
-//     return res.redirect('submit.html')
-
-// })
 
 
 app.get("/",(req,res)=>{
@@ -116,4 +134,8 @@ app.get("/",(req,res)=>{
 
 
 console.log("Listening on PORT 3000");
+
+
+
+
 
