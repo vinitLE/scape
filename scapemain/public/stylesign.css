@@ -79,3 +79,14 @@ header{
     padding-top: 200px;
     text-transform: capitalize;
 }
+.prediction{
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+.prediction h1{
+    font-size: 40px;
+    font-weight: 700;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}

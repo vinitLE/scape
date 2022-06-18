@@ -113,7 +113,7 @@ app.post("/upload",async(req,res)=>{
        let alert=require('alert');
        alert("File uploaded succesfully");  
     
-       return res.redirect('24hour.html');
+       return res.redirect('dashboard.html');
     }catch{
         res.status(400).send(error);
     }
